@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ff168b"><title>Deril & Claudia — Wedding Venues</title>
+<style>
+*{box-sizing:border-box} :root{--pink:#ff168b;--deep:#10082b}
+body{margin:0;min-height:100vh;background:#10082b;color:#fff;font-family:Arial,Helvetica,sans-serif}
+.hero{position:relative;min-height:100vh;padding:24px 16px 40px;display:flex;justify-content:flex-end;align-items:center;flex-direction:column;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(10,4,35,.03) 0%,rgba(10,4,35,.08) 35%,rgba(10,4,35,.94) 62%,#10082b 100%),url('assets/invitation-background.jpg') center top/cover no-repeat;z-index:0}
+.content{position:relative;z-index:1;width:min(100%,720px);text-align:center}
+h1{font-family:Georgia,serif;font-size:clamp(25px,6vw,42px);margin:0 0 8px;text-shadow:0 0 14px var(--pink)}
+.subtitle{letter-spacing:.22em;text-transform:uppercase;font-size:12px;margin:0 0 24px;color:#ffe4f4}
+.venue{display:grid;grid-template-columns:70px 1fr 36px;gap:12px;align-items:center;text-align:left;margin:14px 0;padding:13px;border-radius:20px;text-decoration:none;color:#fff;background:linear-gradient(115deg,rgba(255,20,140,.96),rgba(255,115,36,.94));border:2px solid #fff;box-shadow:0 0 16px var(--pink)}
+.venue.evening{background:linear-gradient(115deg,rgba(44,23,190,.97),rgba(10,118,255,.94));box-shadow:0 0 16px #3d67ff}
+.venue img{width:70px;height:70px;object-fit:cover;border-radius:12px;border:1px solid #fff}
+.venue small{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:5px}
+.venue strong{display:block;font-size:clamp(15px,4vw,21px);line-height:1.2}.venue span{display:block;font-size:13px;margin-top:5px}
+.arrow{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#fff;color:#f01891;font-size:25px;font-weight:bold}
+.footer{font-family:Georgia,serif;font-style:italic;font-size:clamp(15px,4vw,21px);margin-top:24px;color:#ffd9ef;text-shadow:0 0 10px var(--pink)}
+.note{font-size:12px;color:#d9d5f5;margin-top:14px}
+@media(min-width:650px){.hero{padding-bottom:60px}.venue{padding:16px 20px;grid-template-columns:90px 1fr 40px}.venue img{width:90px;height:90px}}
+</style></head>
+<body><main class="hero"><section class="content" aria-label="Wedding venue choices">
+<h1>Find Our Wedding Venues</h1><p class="subtitle">Please select a location</p>
+<a class="venue" href="https://maps.app.goo.gl/A8oiDkmiXY1B1y1b9?g_st=ac" target="_blank" rel="noopener">
+<img src="assets/morning-venue.jpg" alt="Wedding church"><div><small>Morning Venue · 9:30 AM</small><strong>C.S.I. District Church</strong><span>Seynamvilai · Open in Google Maps</span></div><div class="arrow">›</div></a>
+<a class="venue evening" href="https://maps.app.goo.gl/zTjJWnnDLkzsTxw8A" target="_blank" rel="noopener">
+<img src="assets/evening-venue.jpg" alt="Reception hall"><div><small>Evening Venue · 5:00 PM onwards</small><strong>C.S.I. Community Hall</strong><span>Devicode · Open in Google Maps</span></div><div class="arrow">›</div></a>
+<p class="footer">Deril &amp; Claudia · Two Hearts, One Journey</p><p class="note">Tap either venue to open directions in Google Maps.</p>
+</section></main></body></html>
