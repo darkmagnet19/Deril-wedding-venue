@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#10082b">
+<title>Deril &amp; Claudia — Wedding Venues</title>
+<style>
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100%;background:#10082b;color:#fff;font-family:Arial,Helvetica,sans-serif}
+main{width:100%;max-width:1200px;margin:0 auto}
+.poster-wrap{position:relative;width:100%;line-height:0;isolation:isolate}
+.poster{display:block;width:100%;height:auto}
+.venue-links{
+  position:absolute;z-index:5;left:5%;right:5%;bottom:17%;
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(10px,2vw,22px);
+  line-height:1.2;
+}
+.venue-button{
+  min-height:clamp(76px,9vw,108px);display:flex;flex-direction:row;
+  align-items:center;justify-content:flex-start;gap:clamp(8px,1.3vw,16px);padding:10px 14px;
+  border:2px solid #fff;border-radius:16px;color:#fff;text-decoration:none;
+  text-align:left;font-weight:700;
+  box-shadow:0 0 14px #ff168b99,inset 0 0 16px #ffffff18;
+  background:linear-gradient(110deg,rgba(255,10,125,.96),rgba(184,16,111,.94));
+  backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+}
+.venue-button.evening{
+  background:linear-gradient(110deg,rgba(41,75,255,.96),rgba(36,22,145,.94));
+  box-shadow:0 0 14px #3166ffb3,inset 0 0 16px #ffffff18;
+}
+.venue-button .church-dp{
+  display:block;flex:0 0 clamp(48px,6.5vw,76px);width:clamp(48px,6.5vw,76px);
+  height:clamp(48px,6.5vw,76px);object-fit:cover;border-radius:50%;
+  border:2px solid #ffe7f7;box-shadow:0 0 10px #fff8;
+}
+.venue-button .venue-copy{display:flex;min-width:0;flex:1;flex-direction:column;align-items:flex-start;gap:4px}
+.venue-button .label{font-size:clamp(10px,1.25vw,15px);letter-spacing:.1em;text-transform:uppercase}
+.venue-button .name{font:700 clamp(13px,1.8vw,22px)/1.15 Georgia,serif}
+.venue-button .time{font-size:clamp(10px,1.25vw,15px);font-weight:600}
+.venue-button:hover{filter:brightness(1.15);transform:translateY(-2px)}
+.venue-button:focus-visible{outline:4px solid white;outline-offset:4px}
+@media(max-width:480px){
+  .venue-links{left:3%;right:3%;bottom:17%;gap:7px}
+  .venue-button{padding:8px 6px;border-radius:11px;min-height:68px;gap:6px}
+  .venue-button .church-dp{flex-basis:clamp(34px,10vw,48px);width:clamp(34px,10vw,48px);height:clamp(34px,10vw,48px);border-width:1.5px}
+  .venue-button .venue-copy{gap:3px}
+  .venue-button .label{font-size:clamp(8px,2vw,10px);letter-spacing:.04em}
+  .venue-button .name{font-size:clamp(10px,2.7vw,14px)}
+  .venue-button .time{font-size:clamp(8px,2vw,11px)}
+}
+@media(prefers-reduced-motion:reduce){.venue-button{transition:none}.venue-button:hover{transform:none}}
+</style>
+</head>
+<body>
+<main>
+  <section class="poster-wrap" aria-label="Wedding invitation with venue links">
+    <img class="poster" src="assets/wedding-poster-full.png" alt="Deril and Claudia wedding invitation, neon sunset city theme">
+    <nav class="venue-links" aria-label="Choose wedding venue">
+      <a class="venue-button morning" href="https://maps.app.goo.gl/A8oiDkmiXY1B1y1b9?g_st=ac" target="_blank" rel="noopener noreferrer" aria-label="Open morning venue, C.S.I. District Church, Seynamvilai, at 9:30 AM in Google Maps">
+        <img class="church-dp" src="assets/morning-church.jpg" alt="">
+        <span class="venue-copy">
+          <span class="label">☀ Morning Venue</span>
+          <span class="name">C.S.I. District Church</span>
+          <span class="time">Seynamvilai · 9:30 AM</span>
+        </span>
+      </a>
+      <a class="venue-button evening" href="https://maps.app.goo.gl/zTjJWnnDLkzsTxw8A" target="_blank" rel="noopener noreferrer" aria-label="Open evening venue, C.S.I. Community Hall, Devicode, at 5:00 PM onwards in Google Maps">
+        <img class="church-dp" src="assets/evening-church.jpg" alt="">
+        <span class="venue-copy">
+          <span class="label">☾ Evening Venue</span>
+          <span class="name">C.S.I. Community Hall</span>
+          <span class="time">Devicode · 5:00 PM onwards</span>
+        </span>
+      </a>
+    </nav>
+  </section>
+</main>
+</body>
+</html>
