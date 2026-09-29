@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#180b36">
+<title>Deril & Claudia | Wedding Venues</title>
+<style>
+:root{--pink:#ff168d;--blue:#155dff;--ink:#100923}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--ink);color:#fff;font-family:Arial,Helvetica,sans-serif}
+.hero{width:100%;height:min(112vw,920px);min-height:530px;background:#24104b url('assets/vice-city-hero.jpg') center top/cover no-repeat}
+.venue-section{position:relative;padding:30px 18px 36px;background:linear-gradient(180deg,#150a31 0%,#24104b 55%,#100923 100%);text-align:center;overflow:hidden}
+.venue-section:before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 15% 10%,#ff168d33,transparent 45%),radial-gradient(ellipse at 85% 20%,#1768ff33,transparent 45%)}
+.section-title{position:relative;margin:0 0 8px;font-family:Georgia,serif;font-size:clamp(27px,5vw,42px);text-shadow:0 0 12px #ff168d}
+.subtitle{position:relative;margin:0 0 25px;font-size:12px;letter-spacing:4px;color:#f9d8ef}
+.venues{position:relative;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;max-width:960px;margin:0 auto}
+.venue{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:300px;padding:24px 20px;border:2px solid;border-radius:22px;text-decoration:none;color:#fff;background:linear-gradient(145deg,#ff168d30,#100923eF);box-shadow:0 0 18px #ff168d80,inset 0 0 20px #ff168d22;transition:transform .2s,box-shadow .2s}
+.venue.evening{border-color:#4b8cff;background:linear-gradient(145deg,#1768ff38,#100923f2);box-shadow:0 0 18px #1768ff88,inset 0 0 20px #1768ff22}
+.venue:hover,.venue:focus-visible{transform:translateY(-5px);box-shadow:0 0 30px #ff168dcc}
+.venue.evening:hover,.venue.evening:focus-visible{box-shadow:0 0 30px #1768ffdd}
+.symbol{display:grid;place-items:center;width:76px;height:76px;border-radius:50%;font-size:38px;background:#ff168d24;border:1px solid #ff9bd3;margin-bottom:17px}
+.evening .symbol{background:#1768ff2b;border-color:#8db6ff}
+.kicker{font-size:12px;letter-spacing:2.5px;color:#ffd5ec;margin-bottom:10px}
+.evening .kicker{color:#cfe0ff}
+h2{font-family:Georgia,serif;font-size:clamp(21px,3.5vw,31px);margin:0 0 7px}
+.place{font-size:14px;letter-spacing:2px;margin-bottom:18px;color:#f5dff0}
+.time{font-size:18px;font-weight:700;margin:0 0 20px}
+.map-cta{display:block;width:100%;padding:14px 16px;border-radius:12px;background:linear-gradient(90deg,#ff168d,#ff4e60);font-weight:700;font-size:16px;box-shadow:0 0 14px #ff168d88}
+.evening .map-cta{background:linear-gradient(90deg,#214dff,#168bff);box-shadow:0 0 14px #1768ff88}
+.tagline{position:relative;margin:28px 0 0;font-family:Georgia,serif;font-style:italic;font-size:clamp(17px,3vw,23px);color:#ffc5e4}
+footer{padding:15px;text-align:center;background:#0b061b;color:#c8b6d9;font-size:12px;letter-spacing:1px}
+@media(max-width:650px){.hero{height:95vw;min-height:440px;background-size:auto 100%;background-position:center top}.venues{grid-template-columns:1fr;max-width:430px}.venue{min-height:275px}.venue-section{padding:28px 14px}}
+</style>
+</head>
+<body>
+<header class="hero" role="img" aria-label="Deril and Claudia Vice City sunset wedding artwork"></header>
+<main class="venue-section">
+  <h1 class="section-title">Find Our Wedding Venues</h1>
+  <p class="subtitle">PLEASE SELECT A LOCATION</p>
+  <div class="venues">
+    <a class="venue morning" href="https://maps.app.goo.gl/A8oiDkmiXY1B1y1b9?g_st=ac" target="_blank" rel="noopener noreferrer" aria-label="Open morning venue, C.S.I. District Church, Seynamvilai, in Google Maps">
+      <div class="symbol" aria-hidden="true">☀</div>
+      <div class="kicker">MORNING VENUE</div>
+      <h2>C.S.I. District Church</h2>
+      <div class="place">SEYNAMVILAI</div>
+      <p class="time">9:30 AM</p>
+      <span class="map-cta">📍 &nbsp; Open in Google Maps &nbsp; ›</span>
+    </a>
+    <a class="venue evening" href="https://maps.app.goo.gl/zTjJWnnDLkzsTxw8A" target="_blank" rel="noopener noreferrer" aria-label="Open evening venue, C.S.I. Community Hall, Devicode, in Google Maps">
+      <div class="symbol" aria-hidden="true">☾</div>
+      <div class="kicker">EVENING VENUE</div>
+      <h2>C.S.I. Community Hall</h2>
+      <div class="place">DEVICODE</div>
+      <p class="time">5:00 PM Onwards</p>
+      <span class="map-cta">📍 &nbsp; Open in Google Maps &nbsp; ›</span>
+    </a>
+  </div>
+  <p class="tagline">Deril &amp; Claudia · Two Hearts, One Journey</p>
+</main>
+<footer>13 NOVEMBER 2026 &nbsp; • &nbsp; TWO HEARTS, ONE JOURNEY</footer>
+</body>
+</html>
