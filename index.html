@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -9,11 +8,13 @@
 <title>Deril &amp; Claudia — Wedding Venues</title>
 
 <style>
+
 * {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   min-height: 100%;
   background: #10082b;
@@ -40,299 +41,464 @@ main {
   height: auto;
 }
 
-/* =========================
+
+/* =====================================================
    DESKTOP VENUE CARDS
-========================= */
+===================================================== */
 
 .venue-links {
   position: absolute;
+
   z-index: 5;
 
   top: 51.5%;
-  right: 2.5%;
+  right: 1%;
+  left: auto;
+
   width: 43%;
 
   display: grid;
   grid-template-columns: minmax(0, 1fr);
+
   gap: clamp(12px, 1.4vw, 20px);
 
   line-height: 1.2;
 }
 
+
 .venue-button {
+
   min-width: 0;
   min-height: 0;
+
   height: auto;
 
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: flex-start;
 
   gap: clamp(8px, 1vw, 14px);
+
   padding: clamp(12px, 1.4vw, 18px) 10px;
 
   border: 2px solid rgba(255,255,255,.95);
+
   border-radius: 18px;
 
   color: #fff;
+
   text-decoration: none;
+
   text-align: center;
+
   font-weight: 700;
 
   box-shadow:
     0 0 18px #ff168b88,
     inset 0 0 20px #ffffff20;
 
-  background: linear-gradient(
-    110deg,
-    rgba(255,10,125,.66),
-    rgba(184,16,111,.60)
-  );
+  background:
+    linear-gradient(
+      110deg,
+      rgba(255,10,125,.66),
+      rgba(184,16,111,.60)
+    );
 
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 
-  transition: filter .2s ease, transform .2s ease;
+  transition:
+    filter .2s ease,
+    transform .2s ease;
 }
 
+
+/* Evening card */
+
 .venue-button.evening {
-  background: linear-gradient(
-    110deg,
-    rgba(41,75,255,.48),
-    rgba(36,22,145,.44)
-  );
+
+  background:
+    linear-gradient(
+      110deg,
+      rgba(41,75,255,.48),
+      rgba(36,22,145,.44)
+    );
 
   box-shadow:
     0 0 18px #3166ff99,
     inset 0 0 20px #ffffff20;
 }
 
-/* Church images */
+
+/* Desktop church DP */
 
 .venue-button .church-dp {
+
   display: block;
 
   flex: 0 0 clamp(160px, 24vw, 260px);
 
   width: clamp(160px, 24vw, 260px);
+
   height: clamp(160px, 24vw, 260px);
 
   object-fit: cover;
+
   border-radius: 50%;
 
   border: 2px solid #ffe7f7;
-  box-shadow: 0 0 12px #fff8;
+
+  box-shadow:
+    0 0 12px #fff8;
 }
+
 
 /* Venue text */
 
 .venue-button .venue-copy {
+
   display: flex;
 
   min-width: 0;
+
   width: 100%;
 
   flex-direction: column;
+
   align-items: center;
 
   gap: clamp(6px, .7vw, 9px);
 }
 
+
 .venue-button .label {
+
   font-size: clamp(17px, 1.8vw, 21px);
+
   letter-spacing: .07em;
+
   text-transform: uppercase;
 }
 
+
 .venue-button .name {
-  font: 700 clamp(21px, 2.4vw, 28px)/1.15 Georgia, serif;
+
+  font:
+    700 clamp(21px, 2.4vw, 28px)/1.15
+    Georgia,
+    serif;
 }
 
+
 .venue-button .time {
+
   font-size: clamp(17px, 1.8vw, 21px);
+
   font-weight: 600;
 }
 
+
+/* Hover */
+
 .venue-button:hover {
+
   filter: brightness(1.15);
+
   transform: translateY(-2px);
 }
 
+
+/* Keyboard accessibility */
+
 .venue-button:focus-visible {
+
   outline: 4px solid white;
+
   outline-offset: 4px;
 }
 
 
-/* =========================
-   MOBILE LAYOUT
-   CARDS INSIDE BLUE BOXES
-========================= */
+/* =====================================================
+   MOBILE
+   CARDS INSIDE MARKED AREAS
+===================================================== */
 
 @media (max-width: 480px) {
 
+  /*
+     Cards positioned on the right side
+     of the poster.
+
+     Morning = top
+     Evening = bottom
+  */
+
   .venue-links {
-    /*
-      Position both cards in the lower
-      section of the poster, inside the
-      blue-marked area.
 
-      Two cards side by side.
-    */
+    top: 61.5%;
 
-    top: 68%;
-    left: 3%;
-    right: 3%;
+    right: 2.5%;
 
-    width: 94%;
+    left: auto;
 
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: 47%;
 
-    align-items: stretch;
-    gap: 8px;
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
 
     line-height: 1.2;
   }
 
-  /* Horizontal compact venue cards */
+
+  /*
+     MOBILE CARD
+
+     Horizontal layout:
+     
+     DP  |  CENTERED TEXT
+  */
 
   .venue-button,
   .venue-button.evening {
-    display: flex;
 
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    position: relative;
 
     width: 100%;
+
     min-width: 0;
+
     min-height: 0;
+
     height: auto;
 
-    padding: 8px 5px;
+    display: flex;
 
-    gap: 7px;
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 4px;
+
+    padding: 7px 7px 7px 8px;
 
     border-radius: 12px;
+
     border-width: 1.5px;
 
     text-align: center;
   }
 
-  /* Larger church DP relative to compact card */
+
+  /*
+     CHURCH DP
+
+     LEFT SIDE
+  */
 
   .venue-button .church-dp {
-    flex: 0 0 auto;
 
-    width: clamp(65px, 20vw, 90px);
-    height: clamp(65px, 20vw, 90px);
+    order: 1;
 
-    min-width: 0;
-    min-height: 0;
+    flex: 0 0 58px;
 
-    max-width: 100%;
+    width: 58px;
+
+    height: 58px;
+
+    min-width: 58px;
+
+    min-height: 58px;
+
+    max-width: 58px;
+
+    max-height: 58px;
 
     object-fit: cover;
 
     border-radius: 50%;
-    border-width: 1.5px;
+
+    border: 1.5px solid #ffe7f7;
+
+    box-shadow:
+      0 0 8px #fff8;
   }
 
-  /* Text inside each card */
+
+  /*
+     TEXT AREA
+
+     Centered inside remaining space
+  */
 
   .venue-button .venue-copy {
-    display: flex;
 
-    width: 100%;
+    order: 2;
+
+    flex: 1;
+
     min-width: 0;
 
+    width: auto;
+
+    display: flex;
+
     flex-direction: column;
+
     align-items: center;
+
     justify-content: center;
 
-    gap: 5px;
+    gap: 3px;
 
     text-align: center;
+
+    line-height: 1.1;
   }
+
+
+  /*
+     LABEL
+  */
 
   .venue-button .label {
-    font-size: clamp(9px, 2.6vw, 12px);
-    letter-spacing: .015em;
-    line-height: 1.2;
+
+    font-size: 10px;
+
+    letter-spacing: .02em;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
   }
+
+
+  /*
+     VENUE NAME
+  */
 
   .venue-button .name {
+
     font-family: Georgia, serif;
 
-    font-size: clamp(12px, 3.4vw, 15px);
-    font-weight: 700;
-    line-height: 1.2;
+    font-size: 14px;
 
-    overflow-wrap: anywhere;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    text-align: center;
+
+    overflow-wrap: normal;
   }
 
-  .venue-button .time {
-    font-size: clamp(10px, 2.8vw, 12px);
-    font-weight: 600;
-    line-height: 1.3;
 
-    overflow-wrap: anywhere;
+  /*
+     TIME
+  */
+
+  .venue-button .time {
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    line-height: 1.15;
+
+    text-align: center;
+
+    white-space: nowrap;
   }
 
 }
 
 
-/* =========================
-   EXTRA SMALL PHONES
-========================= */
+/* =====================================================
+   VERY SMALL PHONES
+===================================================== */
 
 @media (max-width: 360px) {
 
   .venue-links {
-    left: 2.5%;
-    right: 2.5%;
-    width: 95%;
-    gap: 6px;
+
+    top: 61.5%;
+
+    right: 2%;
+
+    width: 48%;
+
+    gap: 8px;
   }
+
 
   .venue-button,
   .venue-button.evening {
-    padding: 6px 4px;
-    gap: 5px;
+
+    padding: 6px;
+
     border-radius: 10px;
   }
 
+
   .venue-button .church-dp {
-    width: 60px;
-    height: 60px;
+
+    flex-basis: 52px;
+
+    width: 52px;
+
+    height: 52px;
+
+    min-width: 52px;
+
+    min-height: 52px;
+
+    max-width: 52px;
+
+    max-height: 52px;
   }
+
 
   .venue-button .label {
-    font-size: 9px;
+
+    font-size: 8px;
   }
 
+
   .venue-button .name {
+
     font-size: 12px;
   }
 
+
   .venue-button .time {
-    font-size: 10px;
+
+    font-size: 9px;
   }
 
 }
 
 
-/* Reduced motion */
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
   .venue-button {
+
     transition: none;
   }
 
   .venue-button:hover {
+
     transform: none;
   }
 
@@ -341,98 +507,141 @@ main {
 </style>
 </head>
 
+
 <body>
 
 <main>
 
-  <section
-    class="poster-wrap"
-    aria-label="Wedding invitation with venue links"
+<section
+  class="poster-wrap"
+  aria-label="Wedding invitation with venue links"
+>
+
+
+  <!-- =================================================
+       FULL WEDDING BACKGROUND
+  ================================================== -->
+
+  <img
+    class="poster"
+    src="assets/wedding-poster-full.png"
+    alt="Deril and Claudia wedding invitation"
   >
 
-    <!-- Full-size background image -->
-    <img
-      class="poster"
-      src="assets/wedding-poster-full.png"
-      alt="Deril and Claudia wedding invitation"
+
+  <!-- =================================================
+       VENUE BUTTONS
+  ================================================== -->
+
+  <nav
+    class="venue-links"
+    aria-label="Choose wedding venue"
+  >
+
+
+    <!-- =================================================
+         MORNING VENUE
+    ================================================== -->
+
+    <a
+      class="venue-button morning"
+
+      href="https://maps.app.goo.gl/A8oiDkmiXY1B1y1b9?g_st=ac"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      aria-label="Open morning venue, C.S.I. District Church, Seynamvilai, at 9:30 AM in Google Maps"
     >
 
-    <!-- Wedding venue cards -->
-    <nav
-      class="venue-links"
-      aria-label="Choose wedding venue"
+
+      <!-- DP ON LEFT -->
+
+      <img
+        class="church-dp"
+
+        src="assets/morning-church.jpg"
+
+        alt="C.S.I. District Church, Seynamvilai"
+      >
+
+
+      <!-- CENTERED TEXT -->
+
+      <span class="venue-copy">
+
+        <span class="label">
+          ☀ Morning Venue
+        </span>
+
+        <span class="name">
+          C.S.I. District Church
+        </span>
+
+        <span class="time">
+          Seynamvilai · 9:30 AM
+        </span>
+
+      </span>
+
+
+    </a>
+
+
+    <!-- =================================================
+         EVENING VENUE
+    ================================================== -->
+
+    <a
+      class="venue-button evening"
+
+      href="https://maps.app.goo.gl/zTjJWnnDLkzsTxw8A"
+
+      target="_blank"
+
+      rel="noopener noreferrer"
+
+      aria-label="Open evening venue, C.S.I. Community Hall, Devicode, at 5 PM onwards in Google Maps"
     >
 
-      <!-- Morning venue: Seynamvilai -->
-      <a
-        class="venue-button morning"
-        href="https://maps.app.goo.gl/A8oiDkmiXY1B1y1b9?g_st=ac"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Open morning venue, C.S.I. District Church, Seynamvilai, at 9:30 AM in Google Maps"
+
+      <!-- DP ON LEFT -->
+
+      <img
+        class="church-dp"
+
+        src="assets/evening-church.jpg"
+
+        alt="C.S.I. Community Hall, Devicode"
       >
 
-        <img
-          class="church-dp"
-          src="assets/morning-church.jpg"
-          alt="C.S.I. District Church, Seynamvilai"
-        >
 
-        <span class="venue-copy">
+      <!-- CENTERED TEXT -->
 
-          <span class="label">
-            ☀ Morning Venue
-          </span>
+      <span class="venue-copy">
 
-          <span class="name">
-            C.S.I. District Church
-          </span>
-
-          <span class="time">
-            Seynamvilai · 9:30 AM
-          </span>
-
+        <span class="label">
+          ☾ Evening Venue
         </span>
 
-      </a>
-
-
-      <!-- Evening venue: Devicode -->
-      <a
-        class="venue-button evening"
-        href="https://maps.app.goo.gl/zTjJWnnDLkzsTxw8A"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Open evening venue, C.S.I. Community Hall, Devicode, at 5 PM onwards in Google Maps"
-      >
-
-        <img
-          class="church-dp"
-          src="assets/evening-church.jpg"
-          alt="C.S.I. Community Hall, Devicode"
-        >
-
-        <span class="venue-copy">
-
-          <span class="label">
-            ☾ Evening Venue
-          </span>
-
-          <span class="name">
-            C.S.I. Community Hall
-          </span>
-
-          <span class="time">
-            Devicode · 5:00 PM onwards
-          </span>
-
+        <span class="name">
+          C.S.I. Community Hall
         </span>
 
-      </a>
+        <span class="time">
+          Devicode · 5:00 PM onwards
+        </span>
 
-    </nav>
+      </span>
 
-  </section>
+
+    </a>
+
+
+  </nav>
+
+</section>
 
 </main>
 
